@@ -12,4 +12,4 @@ def add():
             json.dump(data, f, indent=4)
         return "complete"
     else:
-        return app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+        return "hello world"
