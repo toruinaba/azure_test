@@ -3,10 +3,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def add():
-    if request.method == 'get':
+    if request.method == 'post':
         data = request.data.decode('utf-8')
         data = json.loads(data)
-        with open('test.json', 'w') as f:
-        	json.dump(data, f, indent=4)
+        print(data)
     else:
         return "hello world"
