@@ -12,4 +12,6 @@ def add():
             json.dump(data, f, indent=4)
         return "complete"
     else:
-        return "hello world"
+        with open('test.json', 'r') as f:
+            r_data = json.load(f)
+        return jsonify(r_data)
