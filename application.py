@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+import json
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -10,4 +12,4 @@ def add():
             json.dump(data, f, indent=4)
         return "complete"
     else:
-        return "hello world"
+        return app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
